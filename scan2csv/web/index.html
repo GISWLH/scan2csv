@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>scan2csv</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">scan2csv</div>
+    <div class="sub">任意扫描表 → Perceive → APIYI → OCR → Structure → Review → CSV</div>
+    <nav>
+      <button data-tab="work" class="active">工作台</button>
+      <button data-tab="settings">设置</button>
+      <button data-tab="jobs">历史</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="tab-work" class="tab active">
+      <div class="grid-2">
+        <div class="card">
+          <h2>上传</h2>
+          <input type="file" id="file" accept="image/*,.pdf" />
+          <label>备注（可选）</label>
+          <textarea id="notes" rows="3" placeholder="例如：只要主表，忽略页脚统计"></textarea>
+          <div class="row">
+            <label><input type="checkbox" id="skipEnhance" /> 跳过 APIYI 增强</label>
+            <label><input type="checkbox" id="skipLlm" /> 跳过 Agent（调试）</label>
+          </div>
+          <button id="btnStart" class="primary">开始处理</button>
+          <p id="jobLabel" class="muted"></p>
+        </div>
+        <div class="card">
+          <h2>Agent 进度</h2>
+          <div class="progress"><div id="bar"></div></div>
+          <ol id="timeline" class="timeline"></ol>
+        </div>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>原图</h3>
+          <img id="imgSource" alt="" />
+        </div>
+        <div class="card">
+          <h3>增强</h3>
+          <img id="imgEnhanced" alt="" />
+        </div>
+        <div class="card">
+          <h3>OCR overlay</h3>
+          <img id="imgOverlay" alt="" />
+        </div>
+      </div>
+      <div class="card">
+        <h2>CSV 预览 / 下载</h2>
+        <div class="row">
+          <a id="dlWide" class="btn" href="#" download>final_wide.csv</a>
+          <a id="dlLong" class="btn" href="#" download>final_long.csv</a>
+          <a id="dlSchema" class="btn" href="#" download>page_schema.json</a>
+        </div>
+        <pre id="csvPreview" class="code"></pre>
+      </div>
+    </section>
+
+    <section id="tab-settings" class="tab">
+      <div class="card">
+        <h2>LLM（多模态 Agent）</h2>
+        <label>Base URL</label>
+        <input id="llmUrl" placeholder="http://host:port/v1" />
+        <label>API Key</label>
+        <input id="llmKey" type="password" placeholder="sk-..." />
+        <label>Model</label>
+        <div class="row">
+          <input id="llmModel" placeholder="grok-4.5" />
+          <button id="btnModels" type="button">刷新模型</button>
+          <button id="btnTestLlm" type="button">测试连接</button>
+        </div>
+        <select id="modelSelect" size="6"></select>
+        <p id="llmTestMsg" class="muted"></p>
+      </div>
+      <div class="card">
+        <h2>APIYI 图改图</h2>
+        <label>Endpoint</label>
+        <input id="apiyiEp" />
+        <label>API Key</label>
+        <input id="apiyiKey" type="password" />
+        <label>Model</label>
+        <input id="apiyiModel" />
+        <label>Size</label>
+        <input id="apiyiSize" />
+      </div>
+      <button id="btnSave" class="primary">保存设置</button>
+      <p id="saveMsg" class="muted"></p>
+    </section>
+
+    <section id="tab-jobs" class="tab">
+      <div class="card">
+        <h2>历史任务</h2>
+        <button id="btnRefreshJobs">刷新</button>
+        <ul id="jobList"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
