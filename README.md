@@ -96,9 +96,9 @@ MIT
 <!-- readme-visual-refresh:execution -->
 ## Demonstration captured on EHPC · 17 October 2026
 
-![Original CSV export function executed on a small explicit demonstration table. This validates the export step only; no OCR or full PDF-to-CSV pipeline was run.](assets/readme/execution-result.png)
+![Original CSV export functions executed on six rows from GISWLH/csvfile/data/Chinastation.csv. This validates the export step only; no OCR or full PDF-to-CSV pipeline was run.](assets/readme/execution-result.png)
 
-Original CSV export function executed on a small explicit demonstration table. This validates the export step only; no OCR or full PDF-to-CSV pipeline was run.
+Original CSV export functions executed on six rows from GISWLH/csvfile/data/Chinastation.csv. This validates the export step only; no OCR or full PDF-to-CSV pipeline was run.
 
 [Execution record and checksums](assets/readme/execution-record.json).
 <!-- /readme-visual-refresh:execution -->

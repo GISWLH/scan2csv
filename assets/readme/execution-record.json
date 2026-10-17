@@ -1,7 +1,7 @@
 {
   "repo": "GISWLH/scan2csv",
   "environment": "EHPC PBS",
-  "execution_scope": "Original CSV export function executed on a small explicit demonstration table. This validates the export step only; no OCR or full PDF-to-CSV pipeline was run.",
+  "execution_scope": "Original CSV export functions executed on six rows from GISWLH/csvfile/data/Chinastation.csv. This validates the export step only; no OCR or full PDF-to-CSV pipeline was run.",
   "exit_code": 0,
   "output": {
     "path": "assets/readme/execution-result.png",
