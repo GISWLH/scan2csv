@@ -1,3 +1,7 @@
+<!-- readme-visual-refresh:banner -->
+![scan2csv — hand-drawn project banner](assets/readme/banner.svg)
+<!-- /readme-visual-refresh:banner -->
+
 # scan2csv
 
 **任意扫描表格 → CSV** 桌面/本地服务工具。
@@ -83,3 +87,18 @@ scan2csv/
 ## 许可
 
 MIT
+
+<!-- readme-visual-refresh:artwork-source -->
+[Editable banner artwork · Excalidraw](assets/readme/banner.excalidraw)
+<!-- /readme-visual-refresh:artwork-source -->
+
+
+<!-- readme-visual-refresh:execution -->
+## Demonstration captured on EHPC · 17 October 2026
+
+![Original CSV export function executed on a small explicit demonstration table. This validates the export step only; no OCR or full PDF-to-CSV pipeline was run.](assets/readme/execution-result.png)
+
+Original CSV export function executed on a small explicit demonstration table. This validates the export step only; no OCR or full PDF-to-CSV pipeline was run.
+
+[Execution record and checksums](assets/readme/execution-record.json).
+<!-- /readme-visual-refresh:execution -->

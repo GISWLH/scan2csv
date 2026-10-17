@@ -1,0 +1,49 @@
+{
+  "repo": "GISWLH/scan2csv",
+  "environment": "EHPC PBS",
+  "execution_scope": "Original CSV export function executed on a small explicit demonstration table. This validates the export step only; no OCR or full PDF-to-CSV pipeline was run.",
+  "exit_code": 0,
+  "output": {
+    "path": "assets/readme/execution-result.png",
+    "sha256": "ef1286cca746fb13776ff33e1959bc3b7a826ed5a72dd46a2e5f248b9b3815ee"
+  },
+  "python": "3.11.9 (main, Apr 19 2024, 16:48:06) [GCC 11.2.0]",
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "matplotlib": "3.9.4",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.5.2",
+    "seaborn": "0.13.2",
+    "shap": "0.46.0",
+    "numba": "0.60.0",
+    "xgboost": "1.7.6"
+  },
+  "started_at_utc": "2026-10-17T17:36:08.529212+00:00",
+  "finished_at_utc": "2026-10-17T17:36:09.144375+00:00",
+  "elapsed_seconds": 0.6151620130985975,
+  "source_files": [
+    {
+      "path": "source/io_util.py",
+      "sha256": "9f5243d699d5d5614b6f0eb34b8f980a8ba178247244e300fb64abaa7386c626",
+      "bytes": 2596
+    },
+    {
+      "path": "source/run_demo.py",
+      "sha256": "969c72c11f777207b0f77f05158f7dfbad26afe409729cf60f03bda3c879cdfd",
+      "bytes": 2598
+    }
+  ],
+  "input_files": [
+    {
+      "path": "manifest.json",
+      "sha256": "abdbea3dd6086c36bc9606e35a028c9bd0d7f570f32dd73a46c4bb57c7a8362e",
+      "bytes": 1539
+    },
+    {
+      "path": "source/Chinastation.csv",
+      "sha256": "bdef0122e72c54c9ae63725e764459288b0e181320387eee1bb49092482f1741",
+      "bytes": 68493
+    }
+  ]
+}
